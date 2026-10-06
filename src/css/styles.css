@@ -253,3 +253,71 @@ input:focus {
     font-size: 1.8rem;
   }
 }
+
+/* ---------- v2: guardado, comunidad y páginas legales ---------- */
+select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #b8c7cf;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.guardar {
+  margin-top: 16px;
+}
+
+.guardar h3 {
+  margin-top: 0;
+  color: var(--azul-oscuro);
+}
+
+.casilla {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-weight: 400;
+}
+
+.casilla input {
+  width: auto;
+  margin-top: 4px;
+}
+
+.ok {
+  color: var(--exito);
+  font-weight: 600;
+}
+
+.pie__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.pie__grid p {
+  margin: 0;
+}
+
+.pie__legal a {
+  color: #fff;
+  margin-left: 16px;
+}
+
+.legal {
+  max-width: 820px;
+}
+
+.legal h1 {
+  color: var(--azul-oscuro);
+}
+
+.legal h2 {
+  font-size: 1.15rem;
+  margin-top: 26px;
+}
