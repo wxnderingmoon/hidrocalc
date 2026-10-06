@@ -2,9 +2,12 @@ package io.github.wxnderingmoon.hidrocalc;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.WindowInsets;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 
 /**
  * Pantalla única de HidroCalc: muestra la calculadora web que viaja
@@ -19,7 +22,21 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle estado) {
         super.onCreate(estado);
         vista = new WebView(this);
-        setContentView(vista);
+
+        // Desde Android 15 las apps se dibujan de borde a borde: el contenedor deja
+        // libre el espacio de la barra de estado y de navegación para que nada quede tapado.
+        FrameLayout raiz = new FrameLayout(this);
+        raiz.setBackgroundColor(0xFF0B3C5D);
+        raiz.addView(vista);
+        raiz.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
+            @Override
+            public WindowInsets onApplyWindowInsets(View v, WindowInsets margenes) {
+                v.setPadding(margenes.getSystemWindowInsetLeft(), margenes.getSystemWindowInsetTop(),
+                        margenes.getSystemWindowInsetRight(), margenes.getSystemWindowInsetBottom());
+                return margenes;
+            }
+        });
+        setContentView(raiz);
 
         WebSettings ajustes = vista.getSettings();
         ajustes.setJavaScriptEnabled(true);       // la calculadora está hecha en JavaScript
