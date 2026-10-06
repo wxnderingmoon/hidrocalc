@@ -1,4 +1,4 @@
-# Checklist previo al lanzamiento — HidroCalc 1.0.0
+# Checklist previo al lanzamiento — HidroCalc 1.0.1
 
 | # | Elemento | Cómo se verificó | Estado |
 |---|---|---|---|
@@ -12,9 +12,9 @@
 | 8 | Seguridad de los datos | Sin recopilación ni uso compartido de datos | ✅ |
 | 9 | Clasificación de contenido | Cuestionario IARC → 3+ / Apto para todo público | ✅ |
 | 10 | Público objetivo | 13 años o más | ✅ |
-| 11 | Nivel de API objetivo | targetSdkVersion 35 (requisito vigente de Google Play) | ✅ |
+| 11 | Nivel de API objetivo | targetSdkVersion 36 (Android 16), obligatorio para apps nuevas desde el 31 de agosto de 2026 | ✅ |
 | 12 | Paquete de distribución | `.aab` firmado con la llave de carga; APK de prueba alineado y verificado con apksigner | ✅ |
-| 13 | Versión | versionCode 1 · versionName 1.0.0 | ✅ |
+| 13 | Versión | versionCode 2 · versionName 1.0.1 | ✅ |
 | 14 | Accesibilidad | Etiquetas en todos los campos, mensajes de error con `role="alert"`, resultado con `aria-live`, texto escalable | ✅ |
 | 15 | Precios y países | Gratis · México | ✅ |
 | 16 | Contacto | 24006044@es.uveg.edu.mx · github.com/wxnderingmoon/hidrocalc | ✅ |
