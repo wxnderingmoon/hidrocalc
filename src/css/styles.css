@@ -1,0 +1,255 @@
+/* ==========================================================
+   HidroCalc - hoja de estilos principal
+   ========================================================== */
+
+:root {
+  --azul-oscuro: #0b3954;
+  --azul: #087e8b;
+  --azul-claro: #bfe6ec;
+  --fondo: #f5fafb;
+  --texto: #1d2b36;
+  --gris: #5b6b77;
+  --alerta: #c0392b;
+  --exito: #2e8b57;
+  --radio: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+  line-height: 1.5;
+}
+
+.contenedor {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+  background: var(--azul-oscuro);
+  color: #fff;
+}
+
+.encabezado__barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.encabezado nav a {
+  color: var(--azul-claro);
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.encabezado nav a:hover {
+  color: #fff;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
+  color: #fff;
+  padding: 48px 0;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  margin: 0 0 12px;
+}
+
+.hero__img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radio);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Secciones ---------- */
+.seccion {
+  padding: 40px 0 8px;
+}
+
+.seccion h2 {
+  color: var(--azul-oscuro);
+}
+
+.tarjeta {
+  background: #fff;
+  border-radius: var(--radio);
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(11, 57, 84, 0.08);
+}
+
+.calc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #b8c7cf;
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: 2px solid var(--azul);
+  border-color: var(--azul);
+}
+
+.boton {
+  display: inline-block;
+  background: #f4a259;
+  color: var(--azul-oscuro);
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background: #f7b679;
+}
+
+.error {
+  color: var(--alerta);
+  font-weight: 600;
+}
+
+/* ---------- Resultado ---------- */
+.resultado__vacio {
+  color: var(--gris);
+}
+
+.resultado__total {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--azul);
+  margin: 0;
+}
+
+.resultado__barra {
+  height: 14px;
+  background: #e4eef1;
+  border-radius: 7px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.resultado__barra span {
+  display: block;
+  height: 100%;
+  background: var(--azul);
+}
+
+.resultado__barra span.alto {
+  background: var(--alerta);
+}
+
+.desglose {
+  list-style: none;
+  padding: 0;
+}
+
+.desglose li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #edf2f4;
+  padding: 6px 0;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--exito);
+}
+
+.etiqueta.alto {
+  background: var(--alerta);
+}
+
+/* ---------- Consejos ---------- */
+.consejos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.consejos li {
+  background: #fff;
+  border-radius: var(--radio);
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(11, 57, 84, 0.08);
+}
+
+.consejos strong {
+  display: block;
+  color: var(--azul-oscuro);
+}
+
+/* ---------- Pie ---------- */
+.pie {
+  margin-top: 40px;
+  padding: 18px 0;
+  background: var(--azul-oscuro);
+  color: var(--azul-claro);
+  font-size: 0.9rem;
+}
+
+/* ---------- Pantallas pequeñas ---------- */
+@media (max-width: 760px) {
+  .hero__grid,
+  .calc,
+  .consejos {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
