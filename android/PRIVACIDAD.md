@@ -1,7 +1,7 @@
 # Política de privacidad — HidroCalc para Android
 
 **Última actualización:** 6 de octubre de 2026
-**Aplicación:** HidroCalc (`io.github.wxnderingmoon.hidrocalc`), versión 1.0.0
+**Aplicación:** HidroCalc (`io.github.wxnderingmoon.hidrocalc`), versión 1.0.1
 
 ## 1. Responsable
 HidroCalc es un proyecto escolar de Paulina Gallardo Valadez, estudiante de Ingeniería en Desarrollo de Software de la Universidad Virtual del Estado de Guanajuato. Contacto: 24006044@es.uveg.edu.mx.

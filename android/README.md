@@ -5,8 +5,8 @@ Versión nativa de la calculadora de consumo de agua. La app muestra la calculad
 | Dato | Valor |
 |---|---|
 | Paquete | `io.github.wxnderingmoon.hidrocalc` |
-| Versión | 1.0.0 (versionCode 1) |
-| SDK mínimo / objetivo | 24 (Android 7.0) / 35 (Android 15) |
+| Versión | 1.0.1 (versionCode 2) |
+| SDK mínimo / objetivo | 24 (Android 7.0) / 36 (Android 16) |
 | Permisos | Ninguno |
 | Política de privacidad | [PRIVACIDAD.md](PRIVACIDAD.md) |
 
@@ -30,4 +30,4 @@ export BUILD_TOOLS=/ruta/build-tools ANDROID_JAR=/ruta/android.jar
 export KEYSTORE=~/llaves/upload-hidrocalc.jks KS_PASS=********
 ./build-android.sh
 ```
-Resultado: `build/hidrocalc-android-v1.0.0.apk` (instalable para pruebas) y `build/hidrocalc-android-v1.0.0.aab` (el que se sube a Google Play).
+Resultado: `build/hidrocalc-android-v1.0.1.apk` (instalable para pruebas) y `build/hidrocalc-android-v1.0.1.aab` (el que se sube a Google Play).

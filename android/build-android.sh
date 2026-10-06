@@ -8,10 +8,10 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-VERSION_NAME=1.0.0
-VERSION_CODE=1
+VERSION_NAME=1.0.1
+VERSION_CODE=2
 MIN_SDK=24
-TARGET_SDK=35
+TARGET_SDK=36
 NOMBRE="hidrocalc-android-v${VERSION_NAME}"
 NM=../node_modules
 MAIN=app/src/main
