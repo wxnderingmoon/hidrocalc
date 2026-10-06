@@ -2,3 +2,5 @@ node_modules/
 dist/
 *.tar.gz
 *.zip
+.env
+certs/*.key
