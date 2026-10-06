@@ -17,6 +17,7 @@
       </a>
       <nav>
         <a href="#calculadora">Calculadora</a>
+        <a href="#comunidad">Comunidad</a>
         <a href="#consejos">Consejos</a>
       </nav>
     </div>
@@ -60,9 +61,35 @@
           <button class="boton" type="submit">Calcular</button>
         </form>
 
-        <div class="tarjeta resultado" id="resultado" aria-live="polite">
-          <p class="resultado__vacio">Llena el formulario y presiona <strong>Calcular</strong>.</p>
+        <div>
+          <div class="tarjeta resultado" id="resultado" aria-live="polite">
+            <p class="resultado__vacio">Llena el formulario y presiona <strong>Calcular</strong>.</p>
+          </div>
+
+          <form id="form-guardar" class="tarjeta guardar" hidden novalidate>
+            <h3>Comparte tu resultado (anónimo)</h3>
+            <p class="resultado__vacio">Ayuda a conocer el consumo promedio por municipio. No guardamos tu nombre, correo ni dirección.</p>
+            <label>Municipio
+              <select id="municipio">
+                <option value="">Prefiero no decirlo</option>
+              </select>
+            </label>
+            <label class="casilla">
+              <input type="checkbox" id="acepta">
+              <span>He leído y acepto el <a href="aviso-privacidad.html">Aviso de Privacidad</a> y los <a href="terminos.html">Términos y Condiciones</a>.</span>
+            </label>
+            <p class="error" id="error-guardar" role="alert" hidden></p>
+            <p class="ok" id="ok-guardar" role="status" hidden></p>
+            <button class="boton" type="submit">Guardar resultado</button>
+          </form>
         </div>
+      </div>
+    </section>
+
+    <section id="comunidad" class="contenedor seccion">
+      <h2>Consumo de la comunidad</h2>
+      <div class="tarjeta" id="estadisticas">
+        <p class="resultado__vacio">Cargando estadísticas…</p>
       </div>
     </section>
 
@@ -73,8 +100,12 @@
   </main>
 
   <footer class="pie">
-    <div class="contenedor">
-      <p>HidroCalc v1.0.0 · Proyecto escolar de Paulina Gallardo Valadez · Los valores son estimaciones de referencia.</p>
+    <div class="contenedor pie__grid">
+      <p>HidroCalc v2.0.0 · Proyecto escolar de Paulina Gallardo Valadez · Los valores son estimaciones de referencia.</p>
+      <nav class="pie__legal">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="terminos.html">Términos y Condiciones</a>
+      </nav>
     </div>
   </footer>
 
