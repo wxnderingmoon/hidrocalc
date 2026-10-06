@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HidroCalc: calcula cuánta agua usa tu hogar al día y recibe consejos para ahorrar.">
+  <title>HidroCalc · Calculadora de consumo de agua</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="marca" href="./">
+        <img src="img/logo.svg" alt="" width="40" height="40">
+        <span>HidroCalc</span>
+      </a>
+      <nav>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#consejos">Consejos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="contenedor hero__grid">
+        <div>
+          <h1>¿Cuánta agua usa tu casa al día?</h1>
+          <p>Responde cinco preguntas sobre las actividades de tu hogar y HidroCalc estimará los litros que consumen al día, cuánto le toca a cada persona y en qué puedes ahorrar.</p>
+          <a class="boton" href="#calculadora">Calcular mi consumo</a>
+        </div>
+        <picture>
+          <source srcset="img/hero.webp" type="image/webp">
+          <img class="hero__img" src="img/hero.jpg" alt="Gotas de agua sobre fondo azul" width="960" height="640">
+        </picture>
+      </div>
+    </section>
+
+    <section id="calculadora" class="contenedor seccion">
+      <h2>Calculadora</h2>
+      <div class="calc">
+        <form id="form-consumo" class="tarjeta" novalidate>
+          <label>Personas que viven en la casa
+            <input type="number" id="personas" min="1" max="20" value="4" required>
+          </label>
+          <label>Minutos de regadera por persona al día
+            <input type="number" id="ducha" min="0" max="60" value="8" required>
+          </label>
+          <label>Veces que se usa el inodoro por persona al día
+            <input type="number" id="inodoro" min="0" max="20" value="5" required>
+          </label>
+          <label>Cargas de lavadora por semana
+            <input type="number" id="lavadora" min="0" max="30" value="4" required>
+          </label>
+          <label>Minutos de riego o lavado de patio a la semana
+            <input type="number" id="riego" min="0" max="600" value="30" required>
+          </label>
+          <p class="error" id="error" role="alert" hidden></p>
+          <button class="boton" type="submit">Calcular</button>
+        </form>
+
+        <div class="tarjeta resultado" id="resultado" aria-live="polite">
+          <p class="resultado__vacio">Llena el formulario y presiona <strong>Calcular</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="consejos" class="contenedor seccion">
+      <h2>Consejos para ahorrar</h2>
+      <ul class="consejos" id="lista-consejos"></ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>HidroCalc v1.0.0 · Proyecto escolar de Paulina Gallardo Valadez · Los valores son estimaciones de referencia.</p>
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
