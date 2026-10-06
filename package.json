@@ -1,0 +1,16 @@
+{
+  "name": "hidrocalc",
+  "version": "1.0.0",
+  "description": "Calculadora de consumo de agua en el hogar (aplicación web estática).",
+  "scripts": {
+    "build": "bash build.sh"
+  },
+  "author": "Paulina Gallardo Valadez",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier-terser": "^7.2.0",
+    "sharp": "^0.33.5",
+    "terser": "^5.36.0"
+  }
+}
