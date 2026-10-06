@@ -1,8 +1,10 @@
 # HidroCalc · Calculadora de consumo de agua
 
+> **Versión 2.0.0:** API en Express.js con base de datos PostgreSQL, dominio local `hidrocalc.local` con HTTPS, encabezados de seguridad, Aviso de Privacidad y Términos y Condiciones. Ver [INSTALL.md](INSTALL.md) para reproducir el entorno.
+
 Aplicación web estática que estima cuántos litros de agua usa un hogar al día a partir de cinco datos (personas, minutos de regadera, uso del inodoro, cargas de lavadora y riego), compara el resultado por persona contra una referencia de 100 L diarios y muestra consejos de ahorro.
 
-Proyecto del Reto 2 del módulo *Despliegue de aplicaciones web y móviles* (UVEG) — Paulina Gallardo Valadez.
+Proyecto de los Retos 2 y 3 del módulo *Despliegue de aplicaciones web y móviles* (UVEG) — Paulina Gallardo Valadez.
 
 ## Estructura del proyecto
 
@@ -89,3 +91,13 @@ curl -I http://localhost:8080/hidrocalc/
 ## Licencia
 
 MIT
+
+## Versión 2.0.0 (Reto 3)
+
+- **Base de datos:** PostgreSQL 14, script `db/init.sql` (tablas `municipios` y `calculos`, llave foránea, restricciones e índices).
+- **Framework:** Express.js (`server/app.js`) con la API `/api/municipios`, `/api/calculos` y `/api/estadisticas`.
+- **Plugin:** express-validator para validar los datos que se guardan.
+- **Seguridad:** dominio `hidrocalc.local`, certificado TLS local, redirección de HTTP a HTTPS y encabezados HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy y Permissions-Policy.
+- **Pruebas:** `tests/pruebas-navegadores.js` (Chrome y Firefox, 9 pruebas) y Lighthouse.
+- **Legal:** `aviso-privacidad.html` y `terminos.html`, enlazados en el pie de página.
+
