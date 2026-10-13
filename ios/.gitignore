@@ -1,0 +1,5 @@
+build/
+HidroCalc.xcodeproj/
+*.ipa
+*.p12
+*.mobileprovision
