@@ -15,15 +15,20 @@ Versión para iPhone y iPad de la calculadora de consumo de agua. La app es una 
 ios/
 ├── project.yml               # definición del proyecto (XcodeGen)
 ├── ExportOptions.plist       # opciones para exportar el .ipa de App Store
-├── build-ios.sh              # archive + export del .ipa
+├── build-ios.sh              # optimiza la web, archive + export del .ipa
+├── preparar-web.sh           # minifica web/ y copia solo WebP/SVG a Resources/www
+├── web/                      # calculadora legible (fuente)
 ├── HidroCalc/
 │   ├── Sources/              # HidroCalcApp.swift, ContentView.swift
-│   ├── Resources/www/        # calculadora web + ios-puente.js
+│   ├── Resources/www/        # calculadora optimizada que viaja en la app (generada)
 │   ├── Assets.xcassets/      # ícono 1024×1024 y color de acento
 │   ├── Info.plist
 │   └── PrivacyInfo.xcprivacy
 └── app-store/                # ficha, checklist, capturas y vista previa
 ```
+
+## Peso de la calculadora dentro de la app
+`preparar-web.sh` minifica HTML, CSS y JavaScript y deja solo la imagen WebP (iOS 17 la soporta), así que los archivos locales pasan de 57.9 KB a 24.9 KB.
 
 ## Compilar y subir (en una Mac)
 ```bash

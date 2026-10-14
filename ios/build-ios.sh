@@ -6,6 +6,9 @@ set -euo pipefail
 cd "$(dirname "$0")"
 : "${TEAM_ID:?Define TEAM_ID con el identificador de tu equipo de Apple}"
 
+echo "==> Optimizando la calculadora web (assets locales)"
+./preparar-web.sh
+
 echo "==> Generando el proyecto de Xcode"
 xcodegen generate
 
