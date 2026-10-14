@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Logotipo de HidroCalc: gota de agua -->
+  <circle cx="32" cy="32" r="30" fill="#087e8b"/>
+  <path d="M32 12 C 24 24, 18 31, 18 38 A 14 14 0 0 0 46 38 C 46 31, 40 24, 32 12 Z" fill="#ffffff"/>
+  <path d="M26 39 A 7 7 0 0 0 32 46" stroke="#087e8b" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
